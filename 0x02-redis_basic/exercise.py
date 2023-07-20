@@ -50,7 +50,7 @@ class Cache:
     """redis caching"""
     def __init__(self):
         self._redis = redis.Redis()
-        self._redis.flushall()
+        self._redis.flushdb()
 
     @count_calls
     @call_history
